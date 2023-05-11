@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario: Quality Tester</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/basic.css">
+        
+        </head>
+    <body>
+        <div class="gridContainer">
+            <div id="header" class="header">
+                <h1 align="center">Job Application Forum: Tester</h1>
+            </div>
+            <div id="questions" class="questions">
+                <form action="#" method="GET">
+                    <div class="question">
+                        <fieldset>
+                            <legend> General Information </legend>
+                            Your Name: <input type="text" name="Nombre" placeholder="First Name">
+                            <br>
+                            Gender: 
+                            <input type="radio" name="gend" value="Femenine"><label for="sexo">Femenine</label>
+                            <input type="radio" name="gend" value="Masculine"><label for="sexo">Masculine</label> 
+                            <input type="radio" name="gend" value="Other"><label for="sexo">Other:</label> <input type="text">
+                            <br>
+                            Phone Number: <input type="tel" name="phone" id="phone" pattern="(686-)^[0-9]{3}-[0-9]{4}" placeholder="686-XXX-XXXX">
+                        </fieldset>
+                    </div>
+
+                    <div class="question">
+                        <fieldset>
+                            <legend> Question 1 </legend>
+                            Which of the following games have you played?
+                            <div id="checkboxList">
+                                <input type="checkbox" id="game" name="game1" value="Dragon Ball"><label for="game">Dragon Ball</label>
+                                <br><input type="checkbox" id="game" name="game2" value="Konosuba"><label for="game">Konosuba</label>
+                                <br><input type="checkbox" id="game" name="game3" value="Miss Kobayashi's Dragon Maid"><label for="game">Miss Kobayashi's Dragon Maid</label>
+                                <br><input type="checkbox" id="game" name="game4" value="Chainsaw Man"><label for="game">Chainsaw Man</label>
+                                <br><input type="checkbox" id="game" name="nogame" value="None"><label for="game">None</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                   
+                    
+                <div class="question">
+                    <fieldset>
+                        <legend>Question 2</legend>
+                        Which of these is your preferred genre in game?
+                        <input list="genres">
+                        <datalist id="genres">
+                            <option value="Action">
+                            <option value="RPG">
+                            <option value="Shooter">
+                            <option value="Survival">
+                        </datalist>
+                    </fieldset>
+                </div>
+                
+                <div class="question">
+                    <fieldset>
+                        <legend>Question 3</legend>
+                        What's the name of your favorite game?
+                        <input type="text" name="favorite">
+                    </fieldset>
+                </div>
+                        
+                <div class="question">
+                    <fieldset>
+                        <legend>Question 4</legend>
+                        How many hours do you spend playing games?
+                        <br>Approx. <input type="number" name="hours" id="hours" min="1" max="20"> hours
+                    </fieldset>
+                </div>
+                    
+                <div class="question">
+                    <fieldset>
+                        <legend>Comments</legend>
+                        Please leave a comment down below! <br>
+                        <textarea name="comments" id="comments" cols="50" rows="5">Comment what you liked about it!
+                        </textarea>
+                    </fieldset>
+                    <input type="submit" value="Submit your information">
+                </div>
+                    
+                </form>
+            </div>
+            
+            <div class="left" onclick="OnClickPrev()">
+                < Prev.
+            </div>
+    
+            <div class="right" onclick="OnClickNext()">
+                Next >
+            </div>
+            
+            <script src="../JS/buttonActions.js"></script>
+        </div>
+    </body>
+</html>
