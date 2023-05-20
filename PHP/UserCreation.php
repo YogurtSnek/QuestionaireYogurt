@@ -5,11 +5,13 @@ $password = "8AxTe=)Sp4>ND+8&>/\$W";
 $dbName = "questionairedb";
 
 
-$conn = mysqli_connect($servername, $username, $password, $dbName);
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbName);
 
 // Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
 
@@ -33,5 +35,6 @@ if (mysqli_query($conn, $sql) === TRUE) {
 }
 
 echo "<br>Closing Connection...";
-mysqli_close($conn);
+$conn->close();
+
 ?>
