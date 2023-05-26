@@ -12,7 +12,6 @@ for (let i = 1; i < questions.length; i++) {
 
 }
 
-
 function OnClickPrev() {
     if (currentQ != 0) {
         
@@ -64,6 +63,4 @@ function OnClickNext() {
         console.log("End of Questions.")
     }
 }
-
-
 
